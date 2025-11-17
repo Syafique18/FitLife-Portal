@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLife Portal</title>
+
+<!-- SIMPLE BEAUTIFUL STYLE -->
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+
+    /* NAVIGATION */
+    nav{
+        position:fixed;
+        top:0;
+        width:100%;
+        background:#0a7a5a;
+        padding:15px 0;
+        box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        z-index:1000;
+    }
+    nav ul{
+        display:flex;
+        justify-content:center;
+        gap:30px;
+        list-style:none;
+    }
+    nav a{
+        color:white;
+        font-weight:bold;
+        text-decoration:none;
+        padding:8px 14px;
+        border-radius:5px;
+    }
+    nav a:hover{
+        background:white;
+        color:#0a7a5a;
+    }
+
+    /* SECTION GENERAL */
+    section{
+        padding:80px 20px;
+        max-width:1100px;
+        margin:auto;
+    }
+    h2{
+        color:#0a7a5a;
+        margin-bottom:15px;
+    }
+    p{
+        margin-bottom:12px;
+        line-height:1.6;
+    }
+
+    /* HOME VIDEO */
+    .video-container{
+        position:relative;
+        width:100%;
+        padding-bottom:56.25%;
+    }
+    .video-container iframe{
+        position:absolute;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+    }
+
+    /* TABLE 2x4 */
+    table{
+        width:100%;
+        border-collapse:collapse;
+        margin-top:20px;
+        text-align:center;
+    }
+    table td{
+        border:1px solid #ddd;
+        padding:20px;
+    }
+    table img{
+        width:60px;
+        height:60px;
+        object-fit:contain;
+        margin-bottom:8px;
+    }
+
+    /* FORM */
+    form{
+        background:#f8f8f8;
+        padding:20px;
+        border-radius:10px;
+        border:1px solid #ddd;
+    }
+    label{
+        font-weight:bold;
+        margin-top:10px;
+        display:block;
+    }
+    input, select, textarea{
+        width:100%;
+        padding:10px;
+        margin:5px 0 15px 0;
+        border-radius:5px;
+        border:1px solid #ccc;
+    }
+    .btn-area{
+        display:flex;
+        gap:10px;
+    }
+    button{
+        padding:10px 15px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-weight:bold;
+    }
+    #submitBtn{background:#0a7a5a;color:white;}
+    #resetBtn{background:#ddd;}
+
+    /* CONTACT */
+    .contact-box{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    /* FOOTER */
+    footer{
+        background:#0a7a5a;
+        color:white;
+        text-align:center;
+        padding:15px 0;
+        margin-top:20px;
+    }
+
+    @media(max-width:800px){
+        .contact-box{
+            grid-template-columns:1fr;
+        }
+        nav ul{
+            flex-direction:column;
+            gap:10px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#workout">Workout</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+    <h2>Welcome to FitLife Portal</h2>
+    <div class="video-container">
+        <iframe src="<iframe width="560" height="315" src="https://www.youtube.com/embed/AdqrTg_hpEQ?si=wUlr8NCQ2SEIJd5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>
+        FitLife Portal provides simple and effective fitness guidance,
+        diet recommendations and a community to help you stay motivated.
+        Start your fitness journey today!
+    </p>
+</section>
+
+<!-- WORKOUT PLANS -->
+<section id="workout">
+    <h2>Workout Plans</h2>
+    <p>Choose your workout plan below.</p>
+
+    <table>
+        <tr>
+            <td><img src="logo1.jpg"><br>Full Body</td>
+            <td><img src="logo2.png"><br>Cardio</td>
+            <td><img src="logo3.png"><br>Strength</td>
+            <td><img src="logo4.png"><br>Flexibility</td>
+        </tr>
+        <tr>
+            <td><img src="logo5.png"><br>HIIT</td>
+            <td><img src="logo6.png"><br>Core</td>
+            <td><img src="logo7.jpg"><br>Beginner</td>
+            <td><img src="logo8.jpg"><br>Advanced</td>
+        </tr>
+    </table>
+
+    <ul>
+        <li>Follow weekly schedule based on your goals.</li>
+        <li>Warm-up and cool-down included in every plan.</li>
+        <li>No equipment? Home alternatives available.</li>
+    </ul>
+</section>
+
+<!-- HEALTH COMMUNITY -->
+<section id="community">
+    <h2>Health Community</h2>
+    <p>Join our community to share tips, progress and encouragement.</p>
+
+    <form id="regForm">
+        <label>Full Name *</label>
+        <input type="text" id="fullname">
+
+        <label>Email *</label>
+        <input type="email" id="email">
+
+        <label>Gender *</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+
+        <label>Age Group *</label>
+        <select id="age">
+            <option value="">-- Select --</option>
+            <option value="18-25">18-25</option>
+            <option value="26-40">26-40</option>
+            <option value="41+">41+</option>
+        </select>
+
+        <label>Interest</label>
+        <input type="checkbox" name="interest" value="weightloss"> Weight Loss
+        <input type="checkbox" name="interest" value="muscle"> Build Muscle
+
+        <label>Message</label>
+        <textarea id="message" rows="3"></textarea>
+
+        <div class="btn-area">
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </div>
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <div>
+            <p><b>Phone:</b> <a href="tel:+60123456789">+60 12-345 6789</a></p>
+            <p><b>Email:</b> <a href="mailto:info@fitlife.com">info@fitlife.com</a></p>
+            <p><b>Date & Time Now:</b> <span id="datetime"></span></p>
+        </div>
+
+        <div>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15935.95823929598!2d101.692207!3d3.139003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b048a83a1bd%3A0xb1df648c06b9ca25!2sKuala%20Lumpur!5e0!3m2!1sen!2smy!4v1700000000000"
+                width="100%" height="250" style="border:0;" allowfullscreen="">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    Copyright © FitLife Portal. All rights reserved.
+</footer>
+
+<!-- JAVASCRIPT (VALIDATION + DATE/TIME + SMOOTH SCROLL) -->
+<script>
+    // Date Time
+    function updateDate(){
+        document.getElementById("datetime").innerHTML = new Date().toLocaleString();
+    }
+    setInterval(updateDate, 1000);
+
+    // Form Validation
+    document.getElementById("regForm").onsubmit = function(e){
+        let name = document.getElementById("fullname").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let gender = document.querySelector("input[name='gender']:checked");
+        let age = document.getElementById("age").value;
+
+        if(name==="" || email==="" || !gender || age===""){
+            alert("Please fill in all required fields.");
+            e.preventDefault();
+            return false;
+        }
+        if(!email.includes("@")){
+            alert("Invalid email.");
+            e.preventDefault();
+            return false;
+        }
+
+        alert("Success! Page will refresh.");
+    };
+
+    // Smooth Scroll
+    document.querySelectorAll("nav a").forEach(link=>{
+        link.addEventListener("click",function(e){
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
+        });
+    });
+</script>
+
+</body>
+</html>
